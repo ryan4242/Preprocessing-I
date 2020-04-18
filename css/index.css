@@ -1,1 +1,450 @@
-/* Compile your LESS file! */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* Set every element's box-sizing to border-box */
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+  font-family: 'Oswald', sans-serif;
+  font-family: 'Roboto', sans-serif;
+  font-family: 'Lato', sans-serif;
+}
+/* VARIABLES */
+/* nav */
+header {
+  height: 10%;
+  width: 100vw;
+  padding: 0 7.5vw 0 7.5vw;
+  display: flex;
+  justify-content: flex-end;
+  align-items: stretch;
+  box-shadow: 1px 0 5px 1px #888888;
+  position: fixed;
+  background-color: #fff;
+  top: 0;
+  z-index: 100;
+}
+header nav {
+  flex-basis: 30%;
+  flex-shrink: 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+@media only screen and (max-width: 500px) {
+  header nav {
+    flex-basis: 100%;
+  }
+}
+header nav a {
+  text-decoration: none;
+  color: #323442;
+  margin-left: 5px;
+}
+header nav a:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+}
+/* intro */
+.content {
+  width: 85vw;
+  margin: auto;
+}
+@media only screen and (max-width: 500px) {
+  .content {
+    width: 100vw;
+    margin: 0;
+  }
+}
+.content .intro {
+  background: #dbdbdb;
+}
+.content .intro .about-me {
+  padding: 5% 5% 3%;
+}
+.content .intro .about-me img {
+  filter: grayscale(100%);
+  transition: all 1s ease-in;
+}
+.content .intro .about-me h1 {
+  font-size: 3rem;
+  letter-spacing: 1.5px;
+}
+.content .intro .about-me p {
+  max-width: 75%;
+}
+.content .intro .about-me p:last-of-type {
+  padding-top: 15px ;
+}
+.content .intro .about-me button {
+  padding: 1rem 2rem;
+  margin: 1rem;
+  margin-left: 0;
+  border-radius: 5px;
+  border: none;
+  background-color: #fff;
+  box-shadow: 0 1px 3px 1px #888888;
+}
+.content .intro .about-me button:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+}
+.content .intro .about-me:hover img {
+  filter: grayscale(0%);
+}
+.content .tech {
+  padding: 3% 0;
+  display: flex;
+  justify-content: space-between;
+}
+.content .tech .paragraph {
+  flex-basis: 45%;
+}
+.content .tech .paragraph h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1%;
+}
+.content .tech .tech-list {
+  padding-right: 10%;
+}
+.content .tech .tech-list h3 {
+  font-size: 1.5rem;
+  margin-bottom: 5%;
+}
+.content .tech .tech-list li {
+  padding-bottom: 3%;
+}
+.content .work {
+  background: #dbdbdb;
+  width: 100%;
+}
+.content .work h3 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+}
+.content .work table {
+  width: 100%;
+}
+.content .work table tr:nth-child(odd) {
+  background-color: #ececec;
+}
+.content .work table tr:nth-child(even) {
+  background-color: #fff;
+}
+.content .work table tr {
+  height: 16px;
+  padding: 10px;
+}
+.content .work th {
+  font-weight: bold;
+  text-align: left;
+  height: 16px;
+  padding: 10px;
+}
+.content .work td {
+  height: 16px;
+  padding: 10px;
+}
+.content .contact-card {
+  background: #dbdbdb;
+  margin: 5% auto;
+  width: 50vw;
+  border-radius: 5px;
+  box-shadow: 0 1px 3px 1px #888888;
+}
+.content .contact-card form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5vh;
+}
+.content .contact-card form label {
+  margin-bottom: 2px;
+}
+.content .contact-card form .txt,
+.content .contact-card form textarea {
+  width: 50%;
+  border: none;
+  border-radius: 5px;
+}
+.content .contact-card form .btn {
+  padding: 1rem 2rem;
+  margin: 1rem;
+  margin-left: 0;
+  border-radius: 5px;
+  border: none;
+  background-color: #fff;
+  box-shadow: 0 1px 3px 1px #888888;
+}
+.content .contact-card form .btn:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+}
+footer {
+  width: 85vw;
+  margin: auto;
+  background-color: #323442;
+  color: #e8e9ed;
+  height: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media only screen and (max-width: 500px) {
+  footer {
+    width: 100vw;
+    margin: 0;
+  }
+}
+footer .intro {
+  background: #dbdbdb;
+}
+footer .intro .about-me {
+  padding: 5% 5% 3%;
+}
+footer .intro .about-me img {
+  filter: grayscale(100%);
+  transition: all 1s ease-in;
+}
+footer .intro .about-me h1 {
+  font-size: 3rem;
+  letter-spacing: 1.5px;
+}
+footer .intro .about-me p {
+  max-width: 75%;
+}
+footer .intro .about-me p:last-of-type {
+  padding-top: 15px ;
+}
+footer .intro .about-me button {
+  padding: 1rem 2rem;
+  margin: 1rem;
+  margin-left: 0;
+  border-radius: 5px;
+  border: none;
+  background-color: #fff;
+  box-shadow: 0 1px 3px 1px #888888;
+}
+footer .intro .about-me button:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+}
+footer .intro .about-me:hover img {
+  filter: grayscale(0%);
+}
+footer .tech {
+  padding: 3% 0;
+  display: flex;
+  justify-content: space-between;
+}
+footer .tech .paragraph {
+  flex-basis: 45%;
+}
+footer .tech .paragraph h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1%;
+}
+footer .tech .tech-list {
+  padding-right: 10%;
+}
+footer .tech .tech-list h3 {
+  font-size: 1.5rem;
+  margin-bottom: 5%;
+}
+footer .tech .tech-list li {
+  padding-bottom: 3%;
+}
+footer .work {
+  background: #dbdbdb;
+  width: 100%;
+}
+footer .work h3 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+}
+footer .work table {
+  width: 100%;
+}
+footer .work table tr:nth-child(odd) {
+  background-color: #ececec;
+}
+footer .work table tr:nth-child(even) {
+  background-color: #fff;
+}
+footer .work table tr {
+  height: 16px;
+  padding: 10px;
+}
+footer .work th {
+  font-weight: bold;
+  text-align: left;
+  height: 16px;
+  padding: 10px;
+}
+footer .work td {
+  height: 16px;
+  padding: 10px;
+}
+footer .contact-card {
+  background: #dbdbdb;
+  margin: 5% auto;
+  width: 50vw;
+  border-radius: 5px;
+  box-shadow: 0 1px 3px 1px #888888;
+}
+footer .contact-card form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5vh;
+}
+footer .contact-card form label {
+  margin-bottom: 2px;
+}
+footer .contact-card form .txt,
+footer .contact-card form textarea {
+  width: 50%;
+  border: none;
+  border-radius: 5px;
+}
+footer .contact-card form .btn {
+  padding: 1rem 2rem;
+  margin: 1rem;
+  margin-left: 0;
+  border-radius: 5px;
+  border: none;
+  background-color: #fff;
+  box-shadow: 0 1px 3px 1px #888888;
+}
+footer .contact-card form .btn:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+}
